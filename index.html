@@ -1,14 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>학교 분실물 찾기</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>학교 분실물 찾기</h1>
+    <header>
+        <h1>학교 분실물 찾기</h1>
+        <p>분실물 정보를 입력하면 유사한 습득물을 찾아드립니다.</p>
+    </header>
 
-    <p>분실물 매칭 프로그램</p>
+    <main>
+
+        <section class="search-box">
+
+            <h2>🔎 분실물 검색</h2>
+
+            <label>물건 종류</label>
+            <input id="lostType" type="text" placeholder="예: 카드지갑">
+
+            <label>색상</label>
+            <input id="lostColor" type="text" placeholder="예: 검정">
+
+            <label>분실 장소</label>
+            <input id="lostPlace" type="text" placeholder="예: 본관 2층">
+
+            <label>특징</label>
+            <input id="lostFeature" type="text" placeholder="예: 캐릭터 스티커">
+
+            <button onclick="findLostItem()">
+                분실물 찾기
+            </button>
+
+        </section>
+
+
+        <section class="result-box">
+
+            <h2>📋 매칭 결과</h2>
+
+            <div id="results">
+                분실물 정보를 입력하고 검색해 주세요.
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
